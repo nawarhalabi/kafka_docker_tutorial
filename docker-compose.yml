@@ -99,10 +99,6 @@ services:
     hostname: jupyter-spark
     volumes:
       - ./spark:/home/jovyan/spark
-    depends_on:
-      - zksrv
-      - ksrv1
-      - ksrv2
     ports:
       - 8889:8888
       - 4040:4040
