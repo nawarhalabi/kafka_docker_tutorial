@@ -12,3 +12,9 @@ Workshop material for learning Kafka through the use of docker and some freely a
     * A jupyter/spark container ```kafkadockertutorial_jupyter-spark_1``` which would be our streaming cluster (one node only)
     * A jdbc mysql container ```kafkadockertutorial_jdbc_1``` and a web interface container to manage the DB ```kafkadockertutorial_adminer_1```
     * A rest API for ingesting data into kafka through http ```rest```
+
+# After running the cluster
+* You can start ```jupyter notebook``` on the local machine in the root repo dir to try the producer consumer api
+* You can go to localhost:8889 to access the spark cluster notebook (on windows use the ip of your docker machine)
+* You can go to localhost:8080 to access the database manager (on windows use the ip of your docker machine)
+* You can go to localhost:9000 to access the kafka manager (on windows use the ip of your docker machine)
