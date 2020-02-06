@@ -25,7 +25,8 @@ Workshop material for learning Kafka through the use of docker and some freely a
    * ```Content-Type: application/vnd.kafka.binary.v2+json```
    * ```Accept: application/vnd.kafka.v2+json, application/vnd.kafka+json, application/json```
 * The body of the POST request must follow the following json structure:
-   ```{
+   ```
+   {
   "records": [
     {
       "key": "a2V5",
@@ -39,4 +40,5 @@ Workshop material for learning Kafka through the use of docker and some freely a
       "value": "bG9ncw=="
     }
   ]
-  }```
+  }
+  ```
