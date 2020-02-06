@@ -18,3 +18,25 @@ Workshop material for learning Kafka through the use of docker and some freely a
 * You can go to localhost:8889 to access the spark cluster notebook (on windows use the ip of your docker machine)
 * You can go to localhost:8080 to access the database manager (on windows use the ip of your docker machine)
 * You can go to localhost:9000 to access the kafka manager (on windows use the ip of your docker machine)
+
+# Using the REST api to produce data to topics
+* Send a POST request to ```http://localhost:8082/topics/mytopic1``` (or use the ip address of the docker machine)
+* Make sure these two headers are set:
+   * ```Content-Type: application/vnd.kafka.binary.v2+json```
+   * ```Accept: application/vnd.kafka.v2+json, application/vnd.kafka+json, application/json```
+* The json body of the POST request must follow the following structure:
+   ```{
+  "records": [
+    {
+      "key": "a2V5",
+      "value": "Y29uZmx1ZW50"
+    },
+    {
+      "value": "a2Fma2E=",
+      "partition": 1
+    },
+    {
+      "value": "bG9ncw=="
+    }
+  ]
+}```
