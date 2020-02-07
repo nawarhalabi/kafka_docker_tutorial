@@ -7,6 +7,7 @@ networks:
 services:
   zksrv:
     hostname: zksrv
+    container_name: zksrv
     image: 'bitnami/zookeeper:latest'
     ports:
       - '2181:2181'
@@ -27,6 +28,7 @@ services:
       - kafka
   ksrv1:
     hostname: ksrv1
+    container_name: ksrv1
     image: 'bitnami/kafka:latest'
     ports:
       - '9092:9092'
@@ -44,6 +46,7 @@ services:
       - kafka
   ksrv2:
     hostname: ksrv2
+    container_name: ksrv2
     image: 'bitnami/kafka:latest'
     ports:
       - '9093:9092'
@@ -95,6 +98,7 @@ services:
     networks:
       - kafka
   jupyter-spark:
+    container_name: spark
     image: jupyter/all-spark-notebook
     hostname: jupyter-spark
     volumes:
